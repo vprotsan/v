@@ -13,7 +13,16 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "classnames": "^2.2.6",
+    "css-loader": "^0.28.11",
+    "helmet": "^3.12.1",
+    "localforage": "^1.7.1",
+    "node-sass": "^4.9.0",
     "proptypes": "^1.1.0",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0"
   }
 }
