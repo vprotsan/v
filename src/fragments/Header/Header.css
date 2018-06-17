@@ -1,12 +1,43 @@
-#header {
+:local(#header) {
   background: #000000;
   color: #ffffff;
+}
+
+:local(.logoText){
+  display: none;
 }
 
 :local(.link) {
   color: orange;
 }
 
+:local(.logo){
+  display: block;
+  line-height: 1;
+}
+
 :local(.blah) {
   font-size: 30px;
+}
+
+:local(.navRight ul){
+  display: flex;
+  list-style: none;
+}
+
+:local(.link a){
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+:local(.toggle){
+  display: none;
+}
+
+:local(.container){
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
 }
