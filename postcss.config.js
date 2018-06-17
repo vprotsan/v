@@ -1,12 +1,3 @@
-// module.exports = {
-//   // parser: 'sugarss',
-//   plugins: {
-//     'postcss-import': {},
-//     'postcss-cssnext': {},
-//     'cssnano': {}
-//   }
-// }
-
 var postCSSConfig = [
   /* autoprefix for different browser vendors */
   require('autoprefixer'),

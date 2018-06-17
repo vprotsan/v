@@ -3,15 +3,8 @@
   color: #ffffff;
 }
 
-.link {
-
-  a {
-    color: green;
-  }
-
-  &.link2 {
-    color:#000000;
-  }
+:local(.link) {
+  color: orange;
 }
 
 .blah {

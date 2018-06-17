@@ -35,7 +35,7 @@ export default class Header extends Component{
             </div>
             <nav className={`${styles.navRight}`}>
               <ul className={styles.navItems}>
-                <li className={`${styles.link}`}>
+                <li className={styles.link}>
                   <Link to='/platform/' className={`${styles.blah} ${styles.mobileOnly}`}>platform</Link>
                 </li>
                 <li className={styles.link2}>

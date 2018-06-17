@@ -47,9 +47,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        // loaders: ['style', 'css', 'postcss'],
-        loader: 'style-loader!css-loader!postcss-loader',
-        include:PATHS.app
+        loaders: ['style', 'css', 'postcss'],
+        // loader: 'style-loader!css-loader!postcss-loader',
+        include: PATHS.app
       },
 
       {
@@ -61,18 +61,6 @@ module.exports = {
       },
     ]
   },
-  // postcss: function() {
-  //   return [
-  //     autoprefixer({
-  //       browsers: [
-  //         '>1%',
-  //         'last 4 versions',
-  //         'Firefox ESR',
-  //         'not ie < 9',
-  //       ]
-  //     }),
-  //   ];
-  // },
   postcss: function() {
     return postCSSConfig;
   },
