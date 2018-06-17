@@ -2,7 +2,7 @@
 import React, { Component, PropTypes } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import ReactDOM from 'react-dom' // eslint-disable-line
-import classnames from 'classnames'
+// import classnames from 'classnames'
 import Header from './fragments/Header'
 import './index.global.css'
 import styles from './index.css'

@@ -4,9 +4,16 @@
 }
 
 .link {
-  color: #ffffff;
+
+  a {
+    color: green;
+  }
 
   &.link2 {
     color:#000000;
   }
+}
+
+.blah {
+  font-size: 30px;
 }

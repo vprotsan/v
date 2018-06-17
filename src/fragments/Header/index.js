@@ -5,9 +5,12 @@ import styles from './Header.css'
 import classnames from 'classnames'
 const logo = process.env.LOGO
 
+
 export default class Header extends Component{
 
   render(){
+    console.log(styles);
+
     return(
       <header id='header' ref={header => { this.header = header }}>
           <div className={`${styles.link}`}>
@@ -32,10 +35,10 @@ export default class Header extends Component{
             </div>
             <nav className={`${styles.navRight}`}>
               <ul className={styles.navItems}>
-                <li className={styles.navItem}>
-                  <Link to='/platform/' className={`${styles.link} ${styles.mobileOnly}`}>platform</Link>
+                <li className={`${styles.link}`}>
+                  <Link to='/platform/' className={`${styles.blah} ${styles.mobileOnly}`}>platform</Link>
                 </li>
-                <li className={styles.navItem}>
+                <li className={styles.link2}>
                   <Link to='/developers/' className={styles.link}>developers</Link>
                 </li>
                 <li className={styles.navItem}>
