@@ -7,6 +7,6 @@
   color: orange;
 }
 
-.blah {
+:local(.blah) {
   font-size: 30px;
 }

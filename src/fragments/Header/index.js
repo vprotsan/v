@@ -9,7 +9,6 @@ const logo = process.env.LOGO
 export default class Header extends Component{
 
   render(){
-    console.log(styles);
 
     return(
       <header id='header' ref={header => { this.header = header }}>
