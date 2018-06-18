@@ -11,7 +11,7 @@ module.exports = () => {
     footerHeight: '15.5rem',
     // -- Colors
     yellow: '#ffd734',
-    red: '#e55934',
+    red: '#FD5750',
     red2: '#FD5750',
     red3: '#e14e47',
     red4: '#fff2ef',

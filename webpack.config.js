@@ -26,14 +26,6 @@ module.exports = {
     path: PATHS.build,
     filename: 'bundle.[hash].js'
   },
-  // devServer: {
-  //     historyApiFallback: true,
-  //     hot: true,
-  //     inline: true,
-  //     stats: 'errors-only',
-  //     host: options.host,
-  //     port: options.port
-  //   },
   module: {
     loaders: [
       {
@@ -48,7 +40,6 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-        // loader: 'style-loader!css-loader!postcss-loader',
         include: PATHS.app
       },
 

@@ -33,19 +33,22 @@ export default class Header extends Component{
             <nav className={styles.navRight}>
               <ul className={styles.navItems}>
                 <li className={styles.link}>
-                  <Link to='/platform/' className={styles.link}>platform</Link>
+                  <Link to='/learn/' className={styles.linkActive}>Learn</Link>
                 </li>
                 <li className={styles.link}>
                   <Link to='/developers/' className={styles.link}>developers</Link>
                 </li>
                 <li className={styles.link}>
-                  <Link to='/learn/' className={styles.link}>Learn</Link>
+                  <Link to='/platform/' className={styles.link}>platform</Link>
                 </li>
                 <li className={styles.link}>
-                  <Link to='/resources/' className={styles.link}>resources</Link>
+                  <Link to='/community/' className={styles.link}>community</Link>
                 </li>
                 <li className={styles.link}>
                   <Link to='/enterprise/' className={styles.link}>enterprise</Link>
+                </li>
+                <li className={styles.link}>
+                  <Link to='/resources/' className={styles.link}>resources</Link>
                 </li>
                 <li className={styles.link} ref={cta => { this.cta = cta }}>sign up</li>
               </ul>

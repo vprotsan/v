@@ -1,0 +1,20 @@
+:local(.verticalSubMenu){
+  display: flex;
+}
+
+:local(.horizSubMenu){
+  display: flex;
+  border: 1px solid #ffffff;
+}
+
+:local(.horizSubMenu ul){
+  list-style: none;
+}
+
+:local(.horizSubMenu ul li a){
+  color: red;
+}
+
+:local(.horizSubMenu nav ul){
+  display: flex;
+}
