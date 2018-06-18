@@ -1,5 +1,5 @@
 :local(#header) {
-  background: #000000;
+  background: #272727;
   color: #ffffff;
 }
 
@@ -37,12 +37,19 @@
   text-transform: lowercase;
 }
 
+:local(.link a:hover){
+  background: url('../../assets/slash.svg') no-repeat;
+}
+
 :local(.toggle){
   display: none;
 }
 
 :local(.container){
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 50px 0;
+  width: 80%;
+  max-width: 1115px;
+  margin: 0 auto;
 }
