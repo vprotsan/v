@@ -3,25 +3,12 @@
   color: #ffffff;
 }
 
-:local(.logoText){
-  display: none;
-}
-
 :local(.link) {
   color: orange;
 }
 
 :local(.linkActive){
   background: url('../../assets/slash.svg') no-repeat;
-}
-
-:local(.logo){
-  display: block;
-  line-height: 1;
-}
-
-:local(.blah) {
-  font-size: 30px;
 }
 
 :local(.navRight ul){

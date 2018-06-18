@@ -4,13 +4,13 @@
     <title>Icon</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="learn_overview" transform="translate(-192.000000, -3385.000000)">
-            <g id="Serverless-Application" transform="translate(-230.000000, 1610.000000)">
-                <g id="Benefits" transform="translate(373.000000, 1229.000000)">
-                    <g id="Pay-per-use" transform="translate(0.000000, 546.000000)">
-                        <g id="Icon" transform="translate(49.000000, 0.000000)">
-                            <g id="Group-4-Copy-2" fill="#DFE5E6">
+    <g id="Sandbox" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="learn_overview-(#272727)" transform="translate(-919.000000, -3606.000000)">
+            <g id="Serverless-Application" transform="translate(-230.000000, 1863.000000)">
+                <g id="Benefits" transform="translate(373.000000, 1197.000000)">
+                    <g id="Increased-Velocity" transform="translate(726.000000, 546.000000)">
+                        <g id="Icon" transform="translate(50.000000, 0.000000)">
+                            <g id="Group-4-Copy-3" fill="#DFE5E6">
                                 <circle id="Oval-Copy-13" transform="translate(61.000000, 31.000000) rotate(-270.000000) translate(-61.000000, -31.000000) " cx="61" cy="31" r="1"></circle>
                                 <circle id="Oval-Copy-14" transform="translate(61.000000, 13.000000) rotate(-270.000000) translate(-61.000000, -13.000000) " cx="61" cy="13" r="1"></circle>
                                 <circle id="Oval-Copy-15" transform="translate(61.000000, 49.000000) rotate(-270.000000) translate(-61.000000, -49.000000) " cx="61" cy="49" r="1"></circle>
@@ -298,8 +298,22 @@
                                 <circle id="Oval-Copy-24" transform="translate(31.000000, 67.000000) rotate(-270.000000) translate(-31.000000, -67.000000) " cx="31" cy="67" r="1"></circle>
                                 <circle id="Oval-Copy-25" transform="translate(31.000000, 73.000000) rotate(-270.000000) translate(-31.000000, -73.000000) " cx="31" cy="73" r="1"></circle>
                             </g>
-                            <polyline id="Path-5" stroke="#FD5750" points="1 31 13 43 19 37 31 49 43 19 49 31 67 43 79 61 85 55 91 55 97 49 109 25 115 37 127 49"></polyline>
-                            <polyline id="Path-2" stroke="#FD5750" points="1 61 7 55 19 61 25 55 43 67 55 55 85 43 97 55 109 49 127 67"></polyline>
+                            <g id="Group-26" transform="translate(1.000000, 6.000000)" stroke="#FD5750">
+                                <path d="M0,61 L108,61" id="Path-6"></path>
+                                <path d="M0,49 L90.0055554,49" id="Path-7"></path>
+                                <path d="M0,37 L120,37" id="Path-7"></path>
+                                <path d="M0,25 L36,25" id="Path-7"></path>
+                                <path d="M0,1 L12,1" id="Path-7"></path>
+                                <path d="M0,13 L72,13" id="Path-7"></path>
+                            </g>
+                            <g id="Group-26" transform="translate(1.000000, 12.000000)" stroke="#FD5750">
+                                <path d="M0,61 L78,61" id="Path-6"></path>
+                                <path d="M0,49 L66.0100021,49" id="Path-7"></path>
+                                <path d="M0,37 L84,37" id="Path-7"></path>
+                                <path d="M0,25 L36,25" id="Path-7"></path>
+                                <path d="M0,1 L6,1" id="Path-7"></path>
+                                <path d="M0,13 L60,13" id="Path-7"></path>
+                            </g>
                         </g>
                     </g>
                 </g>

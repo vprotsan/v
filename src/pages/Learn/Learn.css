@@ -110,6 +110,21 @@
   display: flex;
 }
 
+:local(.col){
+  width: 50%;
+}
+
 :local(.col p){
   color: #272727;
+}
+
+
+:local(.innerWrapper){
+  display: flex;
+  max-width: 1115px;
+  margin: 0 auto;
+}
+
+:local(.itemBlock){
+  width: 50%;
 }

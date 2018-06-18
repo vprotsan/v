@@ -1,0 +1,8 @@
+:local(.logo){
+  display: block;
+  line-height: 1;
+}
+
+:local(.logoText){
+  display: none;
+}
