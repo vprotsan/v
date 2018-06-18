@@ -7,7 +7,6 @@ import classnames from 'classnames'
 import Learn from './pages/Learn'
 import Header from './fragments/Header'
 
-import './_variables.js'
 import './index.global.css'
 import styles from './index.css'
 const logo = process.env.LOGO

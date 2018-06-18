@@ -4,7 +4,9 @@ const htmlPlugin        = require('html-webpack-plugin');
 const openBrowserPlugin = require('open-browser-webpack-plugin');
 const dashboardPlugin   = require('webpack-dashboard/plugin');
 const autoprefixer      = require('autoprefixer');
-const postCSSConfig     = require('./postcss.config');
+const postCSSConfig     = require('./postcss.config.js');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 const PATHS = {
@@ -19,52 +21,65 @@ const options = {
 };
 
 module.exports = {
-  entry: {
-    app: PATHS.app
-  },
+  entry: './src/index.js',
+  devtool: 'inline-source-map',
   output: {
     path: PATHS.build,
     filename: 'bundle.[hash].js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           cacheDirectory: true,
-          presets: ['es2015']
+          presets: ['es2015', 'react']
         }
       },
       {
         test: /\.css$/,
-        loaders: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-        include: PATHS.app
+        use:  [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
       },
-
+      {
+        test: /\.scss$/,
+        use:  [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {loader: 'postcss-loader'},
+          {loader: 'sass-loader'}
+        ]
+      },
       {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        loader: 'file',
+        loader: 'file-loader',
         query: {
           name: '[path][name].[ext]'
         }
       },
-    ]
+    ],
   },
-  postcss: function() {
-    return postCSSConfig;
-  },
-  plugins:(loader) => [
-      require('postcss-import')({ root: loader.resourcePath }),
-      require('postcss-cssnext')(),
-      require('autoprefixer')(),
-      require('cssnano')()
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+      favicon: 'public/favicon.ico'
+    })
   ],
-  output: {
-      path: path.join(__dirname, config.destination),
-      publicPath: config.baseUrl.pathname,
-      filename: '[name].[hash].js',
-    },
+  // postcss: function() {
+  //   return postCSSConfig;
+  // },
+  // plugins:(loader) => [
+  //     require('postcss-import')({ root: loader.resourcePath }),
+  //     require('sass-loader')(),
+  //     require('postcss-simple-vars')(),
+  //     require('postcss-cssnext')(),
+  //     require('autoprefixer')(),
+  //     require('cssnano')()
+  // ],
   resolve: { extensions: [ ".js", ".json" ] },
 };

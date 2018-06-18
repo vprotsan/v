@@ -1,20 +1,14 @@
+$hey: #000000;
+
 :local(.mainWrapper){
-  /* background: url('../../assets/heroImage.png') no-repeat;
-  background-size: cover; */
-  color: #ffffff;
+  color: #272727;
 }
 
-:local(.mainImage){
+.mainImage {
   position: relative;
-  /* width: 80%;
-  margin: 0 auto 80px;
-  max-width: 1115px; */
 }
 
-
-
-
-:local(.mainImageInnerwrapper){
+:local(.mainImageInnerwrapper) {
   background: url('../../assets/heroImage.png') no-repeat;
   background-size: cover;
   display: flex;
@@ -32,18 +26,19 @@
 }
 
 :local(.mainImageInnerwrapper ul li a){
-  display: inline-block;
-  color: #ffffff;
-  background: #FD5750;
-  line-height: 1;
-  margin-bottom: 30px;
-  padding: 17px 50px;
-  text-decoration: none;
-  text-transform: lowercase;
-  transition: all 0.2s linear;
-  width: 100%;
-  text-align: center;
+   display: inline-block;
+   color: $hey;
+   background: $red;
+   line-height: 1;
+   margin-bottom: 30px;
+   padding: 17px 50px;
+   text-decoration: none;
+   text-transform: lowercase;
+   transition: all 0.2s linear;
+   width: 100%;
+   text-align: center;
 }
+
 
 :local(.mainImageInnerwrapper ul li a:hover){
   background: #FD5750;

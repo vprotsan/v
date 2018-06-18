@@ -9,14 +9,18 @@ var postCSSConfig = [
   require('postcss-import'),
   /* enable mixins like Sass/Less */
   require('postcss-mixins')({
-    mixins: require('../src/mixins')
+    mixins: require('./src/_mixins.js')
   }),
   /* enable nested css selectors like Sass/Less */
   require('postcss-nested'),
   /* require global variables */
   require('postcss-simple-vars')({
+    silent: true ,
     variables: function variables() {
-      return require('../src/variables')
+      return require('./src/_variables.js')
+    },
+    onVariables(variables) {
+      console.log(variables)
     },
     unknown: function unknown(node, name, result) {
       node.warn(result, 'Unknown variable ' + name)

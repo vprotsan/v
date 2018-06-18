@@ -228,7 +228,7 @@ export default class Learn extends Component{
             <div className="footerWrapper">
                 <div>
                   <nav>
-                    
+
                     <div>
                       <p className="menuTitle">developers</p>
                       <ul>
