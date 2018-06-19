@@ -1,4 +1,5 @@
 $hey: #000000;
+$red: '#FD5750';
 
 :local(.mainWrapper){
   color: #272727;
@@ -8,22 +9,31 @@ $hey: #000000;
   position: relative;
 }
 
-:local(.mainImageInnerwrapper) {
+:local .mainImageInnerwrapper {
   background: url('../../assets/heroImage.png') no-repeat;
   background-size: cover;
   display: flex;
   padding-top: 115px;
   padding-bottom: 150px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 280px;
+  }
 }
 
-:local(.mainImageInnerwrapper ul){
+/* :local(.mainImageInnerwrapper ul){
   display: flex;
   flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
   max-width: 280px;
-}
+} */
 
 :local(.mainImageInnerwrapper ul li a){
    display: inline-block;
@@ -66,7 +76,7 @@ $hey: #000000;
 /* end vert sub menu */
 
 /*  horiz menu */
-:local(.horizSubMenu ul){
+.horizSubMenu ul {
   display: block;
   list-style: none;
   display: flex;
@@ -74,15 +84,25 @@ $hey: #000000;
   padding: 0;
   margin: 0;
   max-width: 440px;
+
+  &-li {
+    &-a {
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 22px;
+      transition: all 0.2s linear;
+    }
+  }
 }
 
-:local(.horizSubMenu ul li a){
+/* :local(.horizSubMenu ul li a){
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
   padding: 10px 22px;
   transition: all 0.2s linear;
-}
+} */
 
 :local(.horizSubMenu ul li a:hover) {
   background: url('../../assets/grey-dotted-grid.svg') no-repeat;

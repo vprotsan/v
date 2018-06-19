@@ -1,85 +1,64 @@
-const path              = require('path');
-const webpack           = require('webpack');
-const htmlPlugin        = require('html-webpack-plugin');
-const openBrowserPlugin = require('open-browser-webpack-plugin');
-const dashboardPlugin   = require('webpack-dashboard/plugin');
-const autoprefixer      = require('autoprefixer');
-const postCSSConfig     = require('./postcss.config.js');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-
-const PATHS = {
-  app: path.join(__dirname, 'src'),
-  images:path.join(__dirname,'src/assets/'),
-  build: path.join(__dirname, 'dist')
-};
-
-const options = {
-  host:'localhost',
-  port:'3000'
-};
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
-  devtool: 'inline-source-map',
+  entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
-    path: PATHS.build,
-    filename: 'bundle.[hash].js'
+    filename: 'js/bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
         loader: 'babel-loader',
-        query: {
-          cacheDirectory: true,
-          presets: ['es2015', 'react']
+        options: {
+          presets: ['babel-preset-env', 'react']
         }
-      },
-      {
-        test: /\.css$/,
-        use:  [
-          'style-loader',
-          'css-loader',
-          'postcss-loader'
-        ]
-      },
-      {
+      }
+    },
+    {
+      test: /\.css$/,
+      use:  [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            modules: true,
+            import: true,
+            localIdentName: '[path][name]__[local]--[hash:base64:5]',
+            importLoaders: 2 // 0 => no loaders (default); 1 => postcss-loader; 2 => postcss-loader, sass-loader
+          }
+        },
+        'postcss-loader',
+        'sass-loader'
+      ]
+    },
+    {
         test: /\.scss$/,
-        use:  [
-          {loader: 'style-loader'},
-          {loader: 'css-loader'},
-          {loader: 'postcss-loader'},
-          {loader: 'sass-loader'}
+        use: [
+            "style-loader", // creates style nodes from JS strings
+            "css-loader", // translates CSS into CommonJS
+            "sass-loader" // compiles Sass to CSS
         ]
-      },
-      {
-        test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        loader: 'file-loader',
-        query: {
-          name: '[path][name].[ext]'
+    },
+    {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
         }
-      },
-    ],
+      }
+  ]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist/*']),
     new HtmlWebpackPlugin({
-      template: 'public/index.html',
-      favicon: 'public/favicon.ico'
-    })
-  ],
-  // postcss: function() {
-  //   return postCSSConfig;
-  // },
-  // plugins:(loader) => [
-  //     require('postcss-import')({ root: loader.resourcePath }),
-  //     require('sass-loader')(),
-  //     require('postcss-simple-vars')(),
-  //     require('postcss-cssnext')(),
-  //     require('autoprefixer')(),
-  //     require('cssnano')()
-  // ],
-  resolve: { extensions: [ ".js", ".json" ] },
-};
+      template: path.resolve(__dirname, 'src', 'index.html')
+    }),
+  ]
+}

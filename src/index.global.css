@@ -64,7 +64,7 @@ video {
 }
 
 body {
-  font-size: $fontSize;
+  /* font-size: $fontSize; */
   font-family: Avenir, sans-serif;
 }
 h1, h2, h3 {
@@ -295,7 +295,7 @@ tfoot td {
   box-shadow: none !important;
 }
 .auth0-lock.auth0-lock .auth0-lock-header-bg {
-  background: $black1 !important;
+  /* background: $black1 !important; */
 }
 .auth0-lock.auth0-lock .auth0-lock-header {
   color: #fff !important;
